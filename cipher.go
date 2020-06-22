@@ -8,10 +8,10 @@ type Cipherable interface {
 
 // Encryptable is an interface which is used to encrypt data
 type Encryptable interface {
-	Encrypt(text string, key string) (value string, err error)
+	Encrypt(text []byte, key []byte) (value []byte, err error)
 }
 
 // Decryptable is an interface which is used to decrypt data
 type Decryptable interface {
-	Decrypt(text string, key string) (value string, err error)
+	Decrypt(text []byte, key []byte) (value []byte, err error)
 }
